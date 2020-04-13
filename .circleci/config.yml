@@ -1,0 +1,192 @@
+xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnMilitary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:textSize="36sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Helicoptor Hunting " />
+
+    <EditText
+        android:id="@+id/selectChopperView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="284dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Select Your Helicoptor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/selectWeaponView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Select Weapon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.819" />
+
+    <Button
+        android:id="@+id/btnCivilian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Civilian"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectChopperView" />
+
+    <Button
+        android:id="@+id/btnMilitary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="16dp"
+        android:text="Military"
+        app:layout_constraintStart_toEndOf="@+id/btnCivilian"
+        app:layout_constraintTop_toBottomOf="@+id/selectChopperView" />
+
+    <Button
+        android:id="@+id/btnVTOL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="14dp"
+        android:text="VTOL"
+        app:layout_constraintStart_toEndOf="@+id/btnMilitary"
+        app:layout_constraintTop_toBottomOf="@+id/selectChopperView" />
+
+    <Button
+        android:id="@+id/btnRPG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="18dp"
+        android:text="RPG"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectWeaponView" />
+
+    <Button
+        android:id="@+id/btnStinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Stinger"
+        app:layout_constraintStart_toEndOf="@+id/btnRPG"
+        app:layout_constraintTop_toBottomOf="@+id/selectWeaponView" />
+
+    <Button
+        android:id="@+id/btnBoozoka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="11dp"
+        android:text="Boozoka"
+        app:layout_constraintStart_toEndOf="@+id/btnStinger"
+        app:layout_constraintTop_toBottomOf="@+id/selectWeaponView" />
+
+    <Button
+        android:id="@+id/btnFire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:background="#851400"
+        android:text="Fire"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/btnEscape"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Escape"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFire" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hunthelicoptor">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+package com.example.hunthelicoptor
+
+
+import andriod.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import andriod.view.Menu;
+import andriod.view.MenuItem;
+import andriod.view.View;
+import andriod.widget.Button;
+import andriod.widget.EditText;
+import andriod.widget.TextView;
+import andriod.widget.Button
+import android.widget.Button
+
+public class MainActivity extends AppCompatActivity() {
+    val value: Any = button civilian,military,VTOL
+    val value: Any = button rPG,stinger,boozoka
+    val value: Any= button escape,fire
+
+
+   @overide
+   protected void onCreate(Bundle savedInstanceState){
+       super.onCreate(savedInstanceState){
+           setContentView(R.Layout.activity_main)
+
+       }
+   }
+
+
+}
+
+
+</manifest>
